@@ -1,0 +1,124 @@
+.demo1{
+    /* background-color: red; */
+    font-size: 20px;
+    padding: 10px;
+    border: 5px solid yellow;
+    /* margin-bottom: 20px; */
+    width: 49%;
+    height: 400px;
+    text-align: center;
+    display: inline-block;
+    vertical-align: top; /* 关键：顶部对齐 */
+    box-sizing: border-box; /* 防止 padding 和 border 影响尺寸 */
+}
+.left{
+    height: 100%;
+    width: 100%;
+    text-align: left;
+    font-size: 20px;
+    color: black;
+    margin-top: 10px;
+}
+#level{
+    font-size: 20px;
+    display: inline-block;
+    margin: 20px;
+    
+}
+#LandNumber{
+    font-size: 30px;
+    display: inline-block;
+    width: 100%;
+}
+#targetLandNumber,
+#currentLandNumber{
+    font-size: 20px;
+    padding: 10px;
+    border: 5px solid red;
+    width: 49%;
+    height: 550px;
+    text-align: center;
+    display: inline-block;
+    box-sizing: border-box; /* 防止 padding 和 border 影响尺寸 */
+    vertical-align: top; /* 关键：顶部对齐 */
+}
+
+
+#querry{
+    padding: 25px;
+    /* display: inline-block; */
+    width: 40%;
+    margin: 15px;
+    margin-left: 10px;
+    font-size: 20px;
+    /* margin-right: auto; */
+    /* text-align: center; */
+
+}
+#clearLandNumber{
+    margin-left: 200px;
+    padding: 10px;
+    font-size: 20px;
+}
+#BaoshiPrice{
+    text-align: left;
+    padding: 20px;
+    margin-bottom: 10px;
+    background-color: white;
+    width: 600px;
+}
+#result{
+    text-align: left;
+    border: 4px solid black;
+    padding: 20px;
+    background-color: aliceblue;
+    white-space: pre-line; /* 保留换行符 */
+}
+
+#level select {
+    padding: 4px;
+    border: 4px solid #ccc;
+    border-radius: 4px;
+    font-size: 30px;
+    width: 200px;
+}
+#LandNumber select{
+    padding: 4px;
+    font-size: 20px;
+    border: 4px solid #ccc;
+    width: 200px;
+    margin: 3px;
+}
+/* ========滑动文本窗口==========*/
+ /* 固定尺寸文本框样式 */
+#scrollable-textbox_NeedFruit,
+#scrollable-textbox_FruitPrice{
+    font-size: 20px;
+    width: 100%;
+    height: 90%;
+    /* padding: 10px; */
+    border: 2px solid #ccc;
+    border-radius: 5px;
+    overflow: auto;  /* 关键属性：自动显示滚动条 */
+    resize: none;    /* 禁止用户调整大小 */
+    font-family: Arial, sans-serif;
+    line-height: 1.5;
+    background-color: #f9f9f9;
+    white-space: pre-line; /* 保留换行符 */
+}
+
+/* 加载提示样式 */
+.loading {
+    color: #666;
+    font-style: italic;
+}
+
+/* 错误提示样式 */
+.error {
+    color: #ff4444;
+    font-weight: bold;
+}
+/*  */
+
+
+
