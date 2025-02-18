@@ -4,6 +4,7 @@
     <meta charset="utf-8">
     <title>Famer Com Here</title>
     <link rel="stylesheet" href="Css/style.css?v=1.0">
+    <link rel="stylesheet" href="Css/modal.css?v=1.0">
 
 </head>
 <body>
@@ -475,7 +476,15 @@
     <!-- 宝石价格 -->
     <div>
         <span style="font-size: 20px;">请输入宝石的价格: <input type="number" id="BaoshiPrice" min="0" max="10"></span>
-        
+        <button id="relationAuthor">联系作者</button>
+        <!-- 弹窗结构 -->
+        <div id="wechatModal" class="modal">
+            <div class="modal-content">
+                <p>有任何问题以及建议请联系我的微信号(请备注来意):</p>
+                <span id="wechatId">AnswerSelfOne</span>
+                <button id="copyBtn">点击复制</button>
+            </div>
+        </div>
     </div>
     <!-- 结果 -->
     <div id="result">
@@ -484,4 +493,5 @@
 </body>
     
     <script src="Js/main.js?v=1.1"></script>
+    <script src="Js/modal.js?v=1.0"></script>
 </html>
