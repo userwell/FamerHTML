@@ -1,3 +1,10 @@
+/* 原始按钮样式 */
+#relationAuthor {
+    margin: 20px;
+    padding: 12px 24px;
+    font-size: 20px;
+    margin-left: 30px;
+}
 /* 弹窗样式 */
 .modal {
     display: none;
@@ -36,9 +43,3 @@
     background-color: #45a049;
 }
 
-/* 原始按钮样式 */
-#relationAuthor {
-    padding: 12px 24px;
-    font-size: 20px;
-    margin-left: 30px;
-}
