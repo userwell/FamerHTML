@@ -29,7 +29,7 @@ def parseData(response):
             '火龙果','橘子','芒果',
             '椰子','菠萝','木瓜',
             '葡萄','化肥','超级化肥',
-            '黄宝石'
+            '黄宝石','桂圆'
             ]
     fruitPrice = {}
     try:
@@ -38,6 +38,7 @@ def parseData(response):
             fruitPrice[fruit[i]] = int(data['lastPrice'])/1000
     except:
         logging.error("访问农场市场价格接口返回数据存在问题,"+str(response))
+        print("访问农场市场价格接口返回数据存在问题,"+str(response))
         return None
     return fruitPrice
 # 2. 获取数据并更新数据库
