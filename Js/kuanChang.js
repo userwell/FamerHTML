@@ -1,7 +1,9 @@
+const fixedDate = "2025-03-07"; // 固定日期
+const fixePrice = 2;            //固定初始价格
 function calculate() {
     // 获取页面元素
     const floorInput = document.getElementById('floor');
-    const priceInput = document.getElementById('price');
+    //const priceInput = document.getElementById('price');
     const errorDiv = document.getElementById('error');
     const resultDiv = document.getElementById('result');
 
@@ -18,7 +20,7 @@ function calculate() {
     }
 
     // 获取价格信息
-    const price = parseFloat(priceInput.value);
+    const price = parseFloat(today_price());
     const hasPrice = !isNaN(price) && price >= 0;
 
     // 计算元宝数据
@@ -45,3 +47,40 @@ function calculate() {
     resultDiv.innerHTML = resultHTML;
     resultDiv.style.display = 'block';
 }
+
+// 今日元宝价格,每日增加0.03元, 3/7/2025初始价格为2
+function today_price(){
+    // 获取今日日期（年月日）
+    function getTodayDate() {
+        const today = new Date();
+        const year = today.getFullYear();
+        const month = String(today.getMonth() + 1).padStart(2, '0'); // 月份从 0 开始，需要加 1
+        const day = String(today.getDate()).padStart(2, '0');
+        return `${year}-${month}-${day}`;
+    }
+
+    // 计算两个日期之间的天数差
+    function getDateDifference(date1, date2) {
+        const oneDay = 24 * 60 * 60 * 1000; // 一天的毫秒数
+        const firstDate = new Date(date1);
+        const secondDate = new Date(date2);
+        const diffDays = Math.round(Math.abs((firstDate - secondDate) / oneDay));
+        return diffDays;
+    }
+
+    const today = getTodayDate(); // 获取今日日期
+
+    const differenceInDays = getDateDifference(today, fixedDate); // 计算相差天数
+    
+    //计算价格
+    const price = fixePrice + differenceInDays * 0.03;
+    return price;
+}
+
+function setTodyPrice(){
+    const todayPrice = document.getElementById("todayPrice");
+    todayPrice.textContent = "今日元宝单价:" + String(today_price());
+}
+setTodyPrice();
+
+
