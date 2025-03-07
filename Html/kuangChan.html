@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>元宝层级计算器</title>
+    <link rel="stylesheet" href="../Css/kuangChang.css?v=1.0">
+</head>
+<body>
+    <div class="container">
+        <h1>元宝层级计算器</h1>
+        <div class="input-group">
+            <label for="floor">选择层数 (1-100)</label>
+            <input type="number" id="floor" min="1" max="100" placeholder="请输入目标层数">
+        </div>
+        <div class="input-group">
+            <label for="price">元宝单价 (可选)</label>
+            <input type="number" id="price" step="0.01" min="0" placeholder="请输入单个元宝价格">
+        </div>
+        <button onclick="calculate()">立即计算</button>
+        <div class="error" id="error">请输入有效的层数！</div>
+        <div id="result"></div>
+    </div>
+
+</body>
+    <script src="../Js/kuanChang.js?v=1.0"></script>
+</html>

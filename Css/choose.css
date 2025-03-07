@@ -1,0 +1,32 @@
+/* 重置默认样式 */
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f0f0f0; /* 背景色 */
+  }
+  
+  /* 按钮容器 */
+  .button-container {
+    text-align: center; /* 按钮水平居中 */
+  }
+  
+  /* 按钮样式 */
+  .btn {
+    margin: 10px; /* 按钮间距 */
+    padding: 10px 20px;
+    font-size: 16px;
+    color: #f6f5f5;
+    background-color: #007bff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .btn:hover {
+    background-color: #ccd2dc; /* 鼠标悬停效果 */
+  }
